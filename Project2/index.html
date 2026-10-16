@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Validation Form</h2>
+        <p class="subtitle">Please enter the correct details</p>
+        <form id="validationForm" novalidate>
+            <div class="form-group">
+                <label for="number">Number (1–10)</label>
+                <input
+                    type="number"
+                    id="number"
+                    placeholder="Enter a number from 1 to 10"
+                    min="1"
+                    max="10"
+                    step="1">
+                <small class="error" id="numberError" aria-live="polite"></small>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your username"
+                    autocomplete="username">
+                <small class="error" id="usernameError" aria-live="polite"></small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password (Numbers Only)</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter numbers only"
+                    inputmode="numeric"
+                    autocomplete="new-password">
+                <small class="error" id="passwordError" aria-live="polite"></small>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Re-enter your password"
+                    autocomplete="new-password">
+                <small class="error" id="confirmPasswordError"
+                       aria-live="polite"></small>
+            </div>
+            <div class="button-row">
+                <button type="submit">Submit</button>
+            </div>
+            <div class="success" id="successMessage" role="status">
+                ✓ Form submitted successfully!
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
+
